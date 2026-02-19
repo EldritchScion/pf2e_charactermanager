@@ -1,7 +1,38 @@
-<head>
-  
-</head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Page metadata and configuration -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vulcan - PF2e Character Manager</title>
 
-<body>
-  <h1>Hello Test</h1>
-</body>
+    <!-- CSS imports go here -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/builder.css" />
+    <link rel="stylesheet" href="css/landing.css" />
+  </head>
+
+  <body>
+    <!-- Sidebar navigation - provides main menu for application -->
+    <nav id="sidebar">
+      <h2 class="nav-title">Vulcan</h2>
+      <!-- Navigation buttons with data-route attributes for client-side routing -->
+      <ul>
+        <li><button data-route="landing">Home</button></li>
+        <li><button data-route="builder">Build Character</button></li>
+        <li><button data-route="load">Load Character</button></li>
+        <li><button data-route="about">About</button></li>
+      </ul>
+    </nav>
+
+    <!-- Main content area - dynamically populated by router based on navigation selection -->
+    <main id="page-content"></main>
+
+    <!-- JavaScript module imports for application functionality -->
+    <!-- router.js: Handles client-side routing and page navigation -->
+    <!-- app.js: Main application logic and initialization -->
+    <script type="module" src="js/router.js"></script>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

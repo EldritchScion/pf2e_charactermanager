@@ -1,0 +1,27 @@
+{
+    "Dwarf": {
+        "hp": 10,
+        "size": "Medium",
+        "speed": 20,
+        "ability_boosts": ["Constitution", "Wisdom", "Free"],
+        "ability_flaws": ["Charisma"],
+        "traits": ["Dwarf", "Humanoid"],
+        "languages": ["Common", "Dwarven"],
+        "additional_languages": [],
+        "heritages": [
+            "Ancient-Blooded Dwarf",
+            "Death Warden Dwarf",
+            "Forge Dwarf",
+            "Rock Dwarf"
+        ],
+        "features": [
+            "Darkvision"
+        ]
+    },
+    "Elf": {
+
+    },
+    "Human": {
+
+    }
+}

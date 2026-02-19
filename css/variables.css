@@ -1,0 +1,26 @@
+/* ==========================================
+   Global CSS Variables
+   ========================================== */
+
+/* Root variables - available globally throughout the application */
+:root {
+    /* ==========================================
+       Grayscale Color Palette
+       ========================================== */
+    /* Gray colors from darkest (900) to lightest (100) for flexibility in theming */
+    
+    --gray-900: #1a1a1a;    /* Darkest gray - used for dark backgrounds */
+    --gray-800: #333333;    /* Very dark gray */
+    --gray-700: #4d4d4d;    /* Dark gray - used for sidebar buttons and panels */
+    --gray-600: #666666;    /* Medium-dark gray - used for hover states */
+    --gray-500: #808080;    /* Medium gray */
+    --gray-400: #999999;    /* Medium-light gray */
+    --gray-300: #b3b3b3;    /* Light gray */
+    --gray-200: #cccccc;    /* Light gray - used for borders */
+    --gray-100: #e6e6e6;    /* Lightest gray - used for light backgrounds */
+    
+    /* ==========================================
+       Text Colors
+       ========================================== */
+    --text-light: #ffffff;  /* White text for contrast on dark backgrounds */
+}

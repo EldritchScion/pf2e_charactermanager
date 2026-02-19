@@ -1,0 +1,62 @@
+/* ==========================================
+   Sidebar Navigation
+   ========================================== */
+
+/* Fixed sidebar - stays in place while page content scrolls */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: var(--gray-900);
+    color: var(--text-light);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   Sidebar Navigation List
+   ========================================== */
+
+/* Remove default list styling for navigation items */
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+/* Add spacing between navigation items */
+#sidebar li {
+    margin-bottom: 15px;
+}
+
+/* ==========================================
+   Sidebar Navigation Buttons
+   ========================================== */
+
+/* Navigation buttons - full width with consistent padding and styling */
+#sidebar button {
+    width: 100%;
+    padding: 10px;
+    background: var(--gray-700);
+    border: none;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Visual feedback on hover - slightly lighter background */
+#sidebar button:hover {
+    background: var(--gray-600);
+}
+
+/* ==========================================
+   Main Page Content Area
+   ========================================== */
+
+/* Main content offset to account for fixed sidebar width - ensures content doesn't overlap sidebar */
+#page-content {
+    margin-left: 220px;
+    padding: 20px;
+}

@@ -1,0 +1,42 @@
+<!-- Main character builder page container -->
+<section id="builder-page">
+    <!-- Left sidebar with character creation form controls -->
+    <aside id="builder-controls">
+        <h2>Character Builder</h2>
+        <p>Use the controls here to build your PF2e character.</p>
+
+        <!-- Character information input section -->
+        <section class="control-section" id="character-info">
+            <h3>Character Information</h3>
+
+            <!-- Character name input field -->
+            <label for="name-input">Name:</label>
+            <input type="text" id="name-input" name="name-input" />
+
+            <!-- Ancestry selection dropdown - populated dynamically from data file -->
+            <label for ="ancestry-select">Ancestry:</label>
+            <select id="ancestry-select" name="ancestry-select">
+                <option value="">Select an ancestry</option>
+            </select>
+
+            <!-- Heritage selection dropdown - populated based on selected ancestry, initially disabled -->
+            <label for="heritage-select">Heritage:</label>
+            <select id="heritage-select" name="heritage-select">
+                <option value="">Select a heritage</option>
+            </select>
+        </section>
+    </aside>
+
+    <!-- Right preview panel showing live updates of selected character attributes -->
+    <article id="builder-preview">
+        <h2>Character Preview</h2>
+        <p>As you make selections, your character's information will be displayed here.</p>
+
+        <h3>Preview Details</h3>
+
+        <!-- Live preview displays that sync with form inputs -->
+        <p id="preview-name">Name: </p>
+        <p id="preview-ancestry">Ancestry: </p>
+        <p id="preview-heritage">Heritage: </p>
+    </article>
+</section>

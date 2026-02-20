@@ -20,7 +20,7 @@
 
                 <!-- Heritage selection dropdown - populated based on selected ancestry, initially disabled -->
                 <label for="heritage-select">Heritage:</label>
-                <select id="heritage-select" name="heritage-select">
+                <select id="heritage-select" name="heritage-select" disabled>
                     <option value="">Select a heritage</option>
                 </select>
 
@@ -36,6 +36,17 @@
                     <option value="">Select a class</option>
                 </select>
             </div>
+        </section>
+
+        <section class="control-section" id="ability-boosts-section">
+            <h3>Ability Boosts</h3>
+            <div id="ancestry-boosts">
+                <div id="ancestry-choice-boost"></div>
+                <div id="ancestry-free-boost"></div>
+            </div>
+            <div id="background-boosts"></div>
+            <div id="class-boosts"></div>
+            <div id="free-boosts"></div>
         </section>
     </aside>
 
@@ -57,27 +68,27 @@
         <div id="ability-scores">
             <div class="ability-box">
                 <div class="ability-label">STR</div>
-                <div class="ability-score" id="str-score">10</div>
+                <div class="ability-score" id="str-score"></div>
             </div>
             <div class="ability-box">
                 <div class="ability-label">DEX</div>
-                <div class="ability-score" id="dex-score">10</div>
+                <div class="ability-score" id="dex-score"></div>
             </div>
             <div class="ability-box">
                 <div class="ability-label">CON</div>
-                <div class="ability-score" id="con-score">10</div>
+                <div class="ability-score" id="con-score"></div>
             </div>
             <div class="ability-box">
                 <div class="ability-label">INT</div>
-                <div class="ability-score" id="int-score">10</div>
+                <div class="ability-score" id="int-score"></div>
             </div>
             <div class="ability-box">
                 <div class="ability-label">WIS</div>
-                <div class="ability-score" id="wis-score">10</div>
+                <div class="ability-score" id="wis-score"></div>
             </div>
             <div class="ability-box">
                 <div class="ability-label">CHA</div>
-                <div class="ability-score" id="cha-score">10</div>
+                <div class="ability-score" id="cha-score"></div>
             </div>
         </div>
 

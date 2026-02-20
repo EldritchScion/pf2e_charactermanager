@@ -4,6 +4,10 @@ export function initBuilderPage() {
     setupPreviewInput();
     // Load ancestry options from data file
     loadAncestries();
+    // Load background options from data file
+    loadBackgrounds();
+    // Load class options from data file
+    loadClasses(); 
 
     // Get the ancestry dropdown element
     const ancestrySelect = document.getElementById("ancestry-select");
@@ -30,11 +34,15 @@ function setupPreviewInput() {
     const nameInput = document.getElementById("name-input");
     const ancestryInput = document.getElementById("ancestry-select");
     const heritageInput = document.getElementById("heritage-select");
+    const backgroundInput = document.getElementById("background-select");
+    const classInput = document.getElementById("class-select");
 
     // Get preview display elements
     const previewName = document.getElementById("preview-name");
     const previewAncestry = document.getElementById("preview-ancestry");
     const previewHeritage = document.getElementById("preview-heritage");
+    const previewBackground = document.getElementById("preview-background");
+    const previewClass = document.getElementById("preview-class");
 
     // Update name preview as user types
     if (nameInput) {
@@ -65,6 +73,28 @@ function setupPreviewInput() {
                 previewHeritage.textContent = "Heritage:";
             } else {
                 previewHeritage.textContent = `Heritage: ${heritageInput.value}`;
+            }
+        });
+    }
+
+    // Update background preview when selection changes
+    if (backgroundInput) {
+        backgroundInput.addEventListener("change", () => {
+            if (backgroundInput.value === "") {
+                previewBackground.textContent = "Background:";
+            } else {
+                previewBackground.textContent = `Background: ${backgroundInput.value}`;
+            }
+        });
+    }
+
+    // Update class preview when selection changes
+    if (classInput) {
+        classInput.addEventListener("change", () => {
+            if (classInput.value === "") {
+                previewClass.textContent = "Class:";
+            } else {
+                previewClass.textContent = `Class: ${classInput.value}`;
             }
         });
     }
@@ -120,6 +150,50 @@ async function loadHeritages() {
         });
     } catch (error) {
         console.error("Error loading heritages:", error);
+    }
+}
+
+// Load background data from JSON file and populate background dropdown
+async function loadBackgrounds() {
+    // Get the background select element
+    const backgroundSelect = document.getElementById("background-select");
+
+    try {
+        // Fetch backgrounds data from external JSON file
+        const response = await fetch("data/backgrounds.json");
+        const backgrounds = await response.json();
+
+        // Create and add an option for each background
+        Object.keys(backgrounds).forEach(background => {
+            const option = document.createElement("option");
+            option.value = background;
+            option.textContent = background;
+            backgroundSelect.appendChild(option);
+        });
+    } catch (error) {
+        console.error("Error loading backgrounds:", error);
+    }
+}
+
+// Load class data from JSON file and populate class dropdown
+async function loadClasses() {
+    // Get the class select element
+    const classSelect = document.getElementById("class-select");
+
+    try {
+        // Fetch classes data from external JSON file
+        const response = await fetch("data/classes.json");
+        const classes = await response.json();
+
+        // Create and add an option for each class
+        Object.keys(classes).forEach(cls => {
+            const option = document.createElement("option");
+            option.value = cls;
+            option.textContent = cls;
+            classSelect.appendChild(option);
+        });
+    } catch (error) {
+        console.error("Error loading classes:", error);
     }
 }
 
